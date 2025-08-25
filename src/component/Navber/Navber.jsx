@@ -2,6 +2,7 @@
 import React from "react";
 import "./Navber.css";
 import { FaHeart, FaUser, FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,7 +10,7 @@ const Navbar = () => {
     
       <div className="navbar-left">
         <h2 className="logo">
-          <span className="logo-green">Jay</span> Shree Kisan<span className="dot">.</span>
+         <Link to='/'><span className="logo-green">Jay</span> Shree Kisan<span className="dot">.</span></Link> 
         </h2>
 
       </div>

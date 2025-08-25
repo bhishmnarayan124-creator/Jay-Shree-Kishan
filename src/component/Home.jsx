@@ -8,11 +8,11 @@ import Banner from './banner/Banner'
 const Home = () => {
   return (
     <div>
-      <Navbar/>
-      <MenuBar/>
+      
+      
       <Banner/>
       <BlogSection/>
-      <Footer/>
+      
     </div>
   )
 }
