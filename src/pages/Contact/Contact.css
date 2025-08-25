@@ -11,6 +11,12 @@
   font-size: 14px;
   color: #666;
   margin-bottom: 10px;
+  width: 90%;
+  height: 40px;
+  background-color: #f1f1f1;
+  margin-left: 60px;
+  margin-top: 20px;
+  padding: 10px 10px;
 }
 
 /* Title */
@@ -113,4 +119,15 @@
   .button-wrapper {
     justify-content: center;
   }
+  .contact {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 40px;
+  background-color: #f1f1f1;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px 10px;
+}
 }
