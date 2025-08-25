@@ -4,12 +4,14 @@ import Navbar from './Navber/Navber'
 import Footer from './Footer/Footer'
 import MenuBar from './MenuBar/MenuBar'
 import Banner from './banner/Banner'
+import Category from './category/Category'
 
 const Home = () => {
   return (
     <div>
       <Navbar/>
       <MenuBar/>
+      <Category/>
       <Banner/>
       <BlogSection/>
       <Footer/>
