@@ -1,0 +1,48 @@
+.special-offers {
+  width: 95%;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 20px 0;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.compare {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.options label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.options select {
+  margin-left: 5px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
