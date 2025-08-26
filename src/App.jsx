@@ -12,6 +12,7 @@ import PopupModal from './component/PopupModal/PopupModal'
 import AccountPage from './component/AccountPage/AccountPage'
   
 import BrandPage from './component/brand/BrandPage'
+import SiteMap from './component/sitemap/SiteMap'
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
       <Route path='/productpage' element={<ProductPage/>}/>
  
       <Route path='/accountPage' element={<AccountPage/>}/>
-      
+       <Route path='/siteMap' element={<SiteMap/>}/> 
        <Route path='/brandPage' element={<BrandPage/>}/> 
      </Routes>
      
