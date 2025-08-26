@@ -1,26 +1,34 @@
 import React from "react";
 import "./Banner.css";
+import { assets } from "../../assets/assets";
+
 
 const Banner = () => {
   return (
     <>
-      <div className="container">
-        {/* Banner */}
-        <div className="banner">
-          <div className="left">Super Discount For Your First Purchase.</div>
-          <div className="center">
-            <button>Free Offer</button>
-          </div>
-          <div className="right">Use discount code in check out !</div>
-        </div>
-        </div>
+  <div className="container">
+  <div className="banner">
+    <img src={assets.banner} alt="banner" />
+    <div className="content">
+      <div className="left">Super Discount For Your First Purchase.</div>
+      <div className="center">
+        <button>Free Offer</button>
+      </div>
+      <div className="right">Use discount code in check out !</div>
+    </div>
+  </div>
+</div>
+
+
 
 
         
         {/* Cards */}
         <div className="cards-container">
           <div className="card">
-            <div className="bg-imag"></div>
+            <div className="bg-imag">
+              <img src={assets.banner1} alt=""/>
+            </div>
             <div className="overlay"></div>
             <div className="content">
               <p className="subtitle">Weekend Discount 40 %</p>
@@ -31,7 +39,9 @@ const Banner = () => {
           </div>
 
           <div className="card">
-            <div className="bg-ima"></div>
+            <div className="bg-ima">
+              <img src={assets.banner2} alt=""/>
+            </div>
             <div className="overlay"></div>
             <div className="content">
               <p className="subtitle">Weekend Discount 40 %</p>
@@ -42,7 +52,9 @@ const Banner = () => {
           </div>
 
           <div className="card">
-            <div className="bg-image"></div>
+            <div className="bg-image">
+              <img src={assets.banner3} alt=""/>
+            </div>
             <div className="overlay"></div>
             <div className="content">
               <p className="subtitle">Weekend Discount 40 %</p>
