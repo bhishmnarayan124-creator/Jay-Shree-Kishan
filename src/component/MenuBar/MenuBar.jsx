@@ -68,7 +68,7 @@ const MenuBar = () => {
         <li><a href="#">Specials</a></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><a href="#">Sitemap</a></li>
-        <li><a href="#">Brand</a></li>
+        <li><Link to='/brandPage'> Brand</Link></li>
       </ul>
 
       <div className="product-header">
