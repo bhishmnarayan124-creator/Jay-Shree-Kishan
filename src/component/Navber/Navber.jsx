@@ -28,11 +28,13 @@ const Navbar = () => {
           <span className="count">0</span>
         </div>
         <div className="account">
+          
           <FaUser className="icon" />
           <span>
             Sign In <br />
-            <span className="highlight">Account</span>
+           <Link to='/accountPage'> <span className="highlight">Account</span></Link>
           </span>
+          
         </div>
         <div className="icon-box">
           <FaShoppingCart className="icon" />

@@ -7,6 +7,9 @@ import Navbar from './component/Navber/Navber'
 import MenuBar from './component/MenuBar/MenuBar'
 import Footer from './component/Footer/Footer'
 import Contact from './pages/Contact/Contact'
+import ProductPage from './component/ProductPage/ProductPage'
+import PopupModal from './component/PopupModal/PopupModal'
+import AccountPage from './component/AccountPage/AccountPage'
 
 const App = () => {
   return (
@@ -14,12 +17,14 @@ const App = () => {
     <div>
       <Navbar/>
       <MenuBar/>
+       <PopupModal/>
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
-      
+      <Route path='/productpage' element={<ProductPage/>}/>
+      <Route path='/accountPage' element={<AccountPage/>}/>
      </Routes>
-      
+     
       <Footer/>
 
     </div>
