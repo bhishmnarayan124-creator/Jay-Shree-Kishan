@@ -6,15 +6,23 @@ import MenuBar from './MenuBar/MenuBar'
 import Banner from './banner/Banner'
 import Category from './category/Category'
 
+import ProductPage from './ProductPage/ProductPage'
+
+
 const Home = () => {
   return (
     <div>
-      <Navbar/>
-      <MenuBar/>
+
+    
       <Category/>
+
+      
+      
+
       <Banner/>
       <BlogSection/>
-      <Footer/>
+      
+      
     </div>
   )
 }

@@ -10,3 +10,9 @@ font-family: "Outfit", sans-serif;
 scroll-behavior: smooth;
 }
 
+a{ 
+
+ text-decoration: none;
+ color: inherit;
+}
+
