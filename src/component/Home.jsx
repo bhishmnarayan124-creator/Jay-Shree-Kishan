@@ -7,6 +7,7 @@ import Banner from './banner/Banner'
 import Category from './category/Category'
 
 import ProductPage from './ProductPage/ProductPage'
+import Products from './Products'
 
 
 const Home = () => {
@@ -20,7 +21,9 @@ const Home = () => {
       
 
       <Banner/>
+      <Products/>
       <BlogSection/>
+      
       
       
     </div>
