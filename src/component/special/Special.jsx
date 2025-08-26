@@ -1,17 +1,24 @@
-import React from 'react'
 import React, { useState } from "react";
 import "./Special.css";
-
+import { FaHome } from "react-icons/fa";
 
 function Special() {
-    const [sortBy, setSortBy] = useState("default");
-    const [show, setShow] = useState(25);
+  const [sortBy, setSortBy] = useState("default");
+  const [show, setShow] = useState(25);
 
   return (
     <>
-     <div className="special-offers">
+      
+      {/* Breadcrumb */}
+      <div className="breadcrumb">
+        <FaHome className="home-icon" />
+        <span className="breadcrumb-text">Special Offers</span>
+      </div>
+
+      {/* Title */}
       <h2 className="title">Special Offers</h2>
 
+      {/* Filter Bar */}
       <div className="filter-bar">
         <div className="compare">Product Compare (0)</div>
 
@@ -38,9 +45,13 @@ function Special() {
           </label>
         </div>
       </div>
-    </div>
+
+      {/* Footer */}
+      <div className="footer">
+        Showing 1 to 7 of 7 (1 Pages)
+      </div>
     </>
-  )
+  );
 }
 
-export default Special
+export default Special;
