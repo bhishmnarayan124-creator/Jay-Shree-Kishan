@@ -10,6 +10,7 @@ import Contact from './pages/Contact/Contact'
 import ProductPage from './component/ProductPage/ProductPage'
 import PopupModal from './component/PopupModal/PopupModal'
 import AccountPage from './component/AccountPage/AccountPage'
+import SiteMap from './component/sitemap/SiteMap'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/productpage' element={<ProductPage/>}/>
       <Route path='/accountPage' element={<AccountPage/>}/>
+      <Route path='/sitemap' element={<SiteMap/>}/>
      </Routes>
      
       <Footer/>

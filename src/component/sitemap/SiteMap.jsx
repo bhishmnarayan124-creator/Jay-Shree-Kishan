@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FaHome, FaArrowUp } from "react-icons/fa";
 import "./SiteMap.css";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SiteMap = () => {
   const [showScroll, setShowScroll] = useState(false);
+  
 
   // Show button after scrolling
   useEffect(() => {
@@ -28,7 +31,7 @@ const SiteMap = () => {
       <div className="sitemap-container">
         {/* Breadcrumb */}
         <div className="breadcrumb">
-          <FaHome className="home-icon" />
+          <Link to='/' ><FaHome  className="home-icon" /></Link>
           <span className="divider">|</span>
           <span className="active">Site Map</span>
         </div>
