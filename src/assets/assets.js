@@ -20,7 +20,7 @@ export const assets = {
     slider_1,
     slider_2,
     slider_3,
-n
+
     banner,
     banner1,
     banner2,
