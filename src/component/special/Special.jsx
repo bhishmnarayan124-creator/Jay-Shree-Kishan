@@ -16,7 +16,7 @@ function Special() {
       </div>
 
       {/* Title */}
-      <h2 className="title">Special Offers</h2>
+      <h2 className="titleoffer">Special Offers</h2>
 
       {/* Filter Bar */}
       <div className="filter-bar">

@@ -6,7 +6,7 @@
 .banner {
   position: relative;
   width: 100%;
-  height: 100px;  /* apne hisaab se */
+  min-height: 120px;  /* fixed height हटाई, flexible height दी */
   border-radius: 12px;
   overflow: hidden;
 }
@@ -16,19 +16,21 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;   /* image crop hoke fit ho jayegi */
+  height: 65%;
+  object-fit: cover;   /* image crop होकर fit होगी */
   z-index: 0;
 }
 
 .banner .content {
   position: relative;
-  z-index: 1;   /* image ke upar aayega */
+  z-index: 1;  /* image के ऊपर आएगा */
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding: 0 30px;
+  padding: 10px 20px;
+  flex-wrap: wrap;   /* छोटा screen होने पर नीचे लपेटेगा */
+  gap: 10px;
 }
 
 .banner .left {
@@ -46,6 +48,11 @@
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  transition: background 0.3s;
+}
+
+.banner .center button:hover {
+  background: #ee6c4d;
 }
 
 .banner .right {
@@ -53,6 +60,35 @@
   font-weight: 500;
   color: #2c3e50;
 }
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 180px;  /* मोबाइल पर height थोड़ी बढ़ाई */
+  }
+
+  .banner .content {
+    flex-direction: column;   /* row → column */
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .banner .left {
+    font-size: 18px;
+  }
+
+  .banner .right {
+    font-size: 14px;
+  }
+
+  .banner .center button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
 
 
 /* Cards container */
@@ -128,7 +164,8 @@
   font-weight: bold;
   margin: 10px 0;
   color: #2f4858;
-  text-align: center;
+  /* text-align: center; */
+  margin-right: 154px;
 }
 
 .text {
