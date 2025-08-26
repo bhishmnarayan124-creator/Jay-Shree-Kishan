@@ -10,6 +10,7 @@ import Contact from './pages/Contact/Contact'
 import ProductPage from './component/ProductPage/ProductPage'
 import PopupModal from './component/PopupModal/PopupModal'
 import AccountPage from './component/AccountPage/AccountPage'
+  
 import BrandPage from './component/brand/BrandPage'
 
 const App = () => {
@@ -23,7 +24,10 @@ const App = () => {
       <Route path='/' element={<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/productpage' element={<ProductPage/>}/>
-      <Route path='/brandPage' element={<BrandPage/>}/>
+ 
+      <Route path='/accountPage' element={<AccountPage/>}/>
+      
+       <Route path='/brandPage' element={<BrandPage/>}/> 
      </Routes>
      
       <Footer/>
