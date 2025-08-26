@@ -8,7 +8,7 @@ import "./Category.css";
 const Features = () => {
   const [showMore, setShowMore] = useState(false);
   const contentRef = useRef(null); 
-  const [height, setHeight] = useState("0px");
+  const [height, setHeight] = useState("0");
 
   const features = [
     { icon: <FaPlus />, title: "Buy / Sell" },
@@ -54,9 +54,9 @@ const Features = () => {
           style={{ maxHeight: height }}
           ref={contentRef}
         >
-          <div className="features-grid">
+          <div className="m-features-grid">
             {features.slice(4).map((f, i) => (
-              <div key={i} className="feature-card">
+              <div key={i} className="m-feature-card">
                 <div className="feature-icon">
                   {f.icon}
                   {f.premium && <span className="crown">★</span>}
