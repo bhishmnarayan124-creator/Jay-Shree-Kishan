@@ -13,6 +13,7 @@ import AccountPage from './component/AccountPage/AccountPage'
   
 import BrandPage from './component/brand/BrandPage'
 import SiteMap from './component/sitemap/SiteMap'
+import Special from './component/special/Special'
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
       <Route path='/' element={<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/productpage' element={<ProductPage/>}/>
- 
+        <Route path='/special' element={<Special/>}/>
       <Route path='/accountPage' element={<AccountPage/>}/>
        <Route path='/siteMap' element={<SiteMap/>}/> 
        <Route path='/brandPage' element={<BrandPage/>}/> 
