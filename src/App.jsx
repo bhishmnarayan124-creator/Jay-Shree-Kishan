@@ -11,6 +11,7 @@ import ProductPage from './component/ProductPage/ProductPage'
 import PopupModal from './component/PopupModal/PopupModal'
 import AccountPage from './component/AccountPage/AccountPage'
 import SiteMap from './component/sitemap/SiteMap'
+import BrandPage from './component/brand/BrandPage'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <Route path='/productpage' element={<ProductPage/>}/>
       <Route path='/accountPage' element={<AccountPage/>}/>
       <Route path='/sitemap' element={<SiteMap/>}/>
+       <Route path='/brandPage' element={<BrandPage/>}/>
      </Routes>
      
       <Footer/>
