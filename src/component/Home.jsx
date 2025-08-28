@@ -40,8 +40,8 @@ const Home = () => {
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
 
-       <TrendingPrices/>
-       <EggRateTable/>
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
        <MarketTable/>
 
       
