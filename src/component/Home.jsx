@@ -7,6 +7,7 @@ import Banner from './banner/Banner'
 import Category from './category/Category'
 
 import ProductPage from './ProductPage/ProductPage'
+import Search from './Searchbar/Search'
 
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
 
     
       <Category/>
-
+      <Search/>
       
       
 
