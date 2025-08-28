@@ -1,13 +1,16 @@
 import React from 'react'
 import BlogSection from './BlogSection'
-import Navbar from './Navber/Navber'
-import Footer from './Footer/Footer'
-import MenuBar from './MenuBar/MenuBar'
+
 import Banner from './banner/Banner'
+
+
 import Category from './category/Category'
 
-import ProductPage from './ProductPage/ProductPage'
 
+import Products from './Products'
+// import BuySellForm from './CategoryData/BuySellForm'
+// import TrendingPrices from './CategoryData/TrendingPrices'
+import EggRateTable from './CategoryData/EggRateTable'
 
 const Home = () => {
   return (
@@ -18,11 +21,17 @@ const Home = () => {
 
       
       
-
+ <Products/>
       <Banner/>
+     
       <BlogSection/>
+      {/* <BuySellForm/> */}
+       {/* <TrendingPrices/> */}
+       <EggRateTable/>
       
       
+      
+
     </div>
   )
 }
