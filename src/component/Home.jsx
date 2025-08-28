@@ -8,7 +8,7 @@ import Category from './category/Category'
 
 
 import Products from './Products'
-// import BuySellForm from './CategoryData/BuySellForm'
+import BuySellForm from './CategoryData/BuySellForm'
 import TrendingPrices from './CategoryData/TrendingPrices'
 import EggRateTable from './CategoryData/EggRateTable'
 import MarketTable from './CategoryData/MarketTable'
@@ -26,7 +26,7 @@ const Home = () => {
       <Banner/>
      
       <BlogSection/>
-      {/* <BuySellForm/> */}
+      <BuySellForm/>
        <TrendingPrices/>
        <EggRateTable/>
        <MarketTable/>

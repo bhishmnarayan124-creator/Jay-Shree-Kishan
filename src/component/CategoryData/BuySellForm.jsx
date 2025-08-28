@@ -9,7 +9,7 @@ const BuySellForm = () => {
     state: "",
     district: "",
     quality: "Good",
-    availableFrom: "",
+    availableFrom: "", 
     language: "English",
     comments: "",
     isOrganic: false,
@@ -50,6 +50,7 @@ const BuySellForm = () => {
         {/* Commodity */}
         <label>Commodity</label>
         <input
+        className="commodity"
           type="text"
           name="commodity"
           placeholder="Ex: Tomato, Potato, Onions"
@@ -60,6 +61,7 @@ const BuySellForm = () => {
         {/* Quantity */}
         <label>Available Quantity</label>
         <input
+         className="commodity"
           type="text"
           name="quantity"
           placeholder="100 KG, 10 TON..."
@@ -82,7 +84,7 @@ const BuySellForm = () => {
           <option value="Pune">Pune</option>
         </select>
 
-        {/* Quality */}
+        {/* Quality */} 
         <label>Quality</label>
         <select name="quality" value={formData.quality} onChange={handleChange}>
           <option value="Good">Good</option>
@@ -93,6 +95,7 @@ const BuySellForm = () => {
         {/* Date */}
         <label>Available From</label>
         <input
+        className="commodity"
           type="date"
           name="availableFrom"
           value={formData.availableFrom}
@@ -137,6 +140,7 @@ const BuySellForm = () => {
           </label>
           <label>
             <input
+            className="commodity"
               type="checkbox"
               name="isGraded"
               checked={formData.isGraded}
@@ -146,6 +150,7 @@ const BuySellForm = () => {
           </label>
           <label>
             <input
+            className="commodity"
               type="checkbox"
               name="isPacked"
               checked={formData.isPacked}
@@ -155,6 +160,7 @@ const BuySellForm = () => {
           </label>
           <label>
             <input
+            className="commodity"
               type="checkbox"
               name="isStoredAC"
               checked={formData.isStoredAC}
@@ -171,6 +177,7 @@ const BuySellForm = () => {
         {/* Contact Details */}
         <h4 className="Your">Your Contact Details</h4>
         <input
+        
           type="text"
           name="name"
           className="name"
@@ -194,7 +201,7 @@ const BuySellForm = () => {
         </label>
          
         {/* Submit */}
-        <button type="submit">Submit</button>
+        <button className="Submit_1" type="submit">Submit</button>
       </form>
     </div>
   );
