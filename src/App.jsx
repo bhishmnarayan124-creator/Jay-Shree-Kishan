@@ -16,6 +16,7 @@ import BrandPage from './component/brand/BrandPage'
 import SiteMap from './component/sitemap/SiteMap'
 
 import Special from './component/special/Special'
+import TrendingPrices from './component/CategoryData/TrendingPrices'
 
 const App = () => {
   return (
@@ -35,6 +36,10 @@ const App = () => {
       <Route path='/accountPage' element={<AccountPage/>}/>
        <Route path='/siteMap' element={<SiteMap/>}/> 
        <Route path='/brandPage' element={<BrandPage/>}/> 
+
+       <Route path='/trendingPrices' element={<TrendingPrices/>}/> 
+
+
 
      </Routes>
      
