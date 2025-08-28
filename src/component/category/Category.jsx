@@ -4,6 +4,7 @@ import { FiTrendingUp } from "react-icons/fi";
 import { HiOutlineChartBar } from "react-icons/hi";
 import { GiEggClutch } from "react-icons/gi";
 import "./Category.css";
+import { Link } from "react-router-dom";
 
 const Features = () => {
   const [showMore, setShowMore] = useState(false);
@@ -16,7 +17,7 @@ const Features = () => {
     { icon: <FaUsers />, title: "View Buyers" },
     { icon: <FaHandshake />, title: "View Sellers" },
     { icon: <GiEggClutch />, title: "Egg Prices" },
-    { icon: <HiOutlineChartBar />, title: "Explore Mandi Price Trends", premium: true },
+    { icon: <Link to='/trendingPrices'><HiOutlineChartBar /></Link>, title: "Explore Mandi Price Trends", premium: true },
     { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true },
     { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App" },
   ];
@@ -36,7 +37,7 @@ const Features = () => {
         <h2>Explore Our Features</h2>
 
        
-        <div className="features-grid">
+    <div className="features-grid">
           {features.slice(0, 4).map((f, i) => (
             <div key={i} className="feature-card">
               <div className="feature-icon">
@@ -59,7 +60,7 @@ const Features = () => {
               <div key={i} className="m-feature-card">
                 <div className="feature-icon">
                   {f.icon}
-                  {f.premium && <span className="crown">★</span>}
+                  <Link to='/trendingPrices'> {f.premium && <span className="crown">★</span>}</Link> 
                 </div>
                 <p>{f.title}</p>
               </div>
