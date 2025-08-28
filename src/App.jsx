@@ -12,7 +12,9 @@ import PopupModal from './component/PopupModal/PopupModal'
 import AccountPage from './component/AccountPage/AccountPage'
   
 import BrandPage from './component/brand/BrandPage'
+
 import SiteMap from './component/sitemap/SiteMap'
+
 import Special from './component/special/Special'
 import TrendingPrices from './component/CategoryData/TrendingPrices'
 
@@ -27,11 +29,18 @@ const App = () => {
       <Route path='/' element={<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/productpage' element={<ProductPage/>}/>
+
+      <Route path='/brandPage' element={<BrandPage/>}/>
+
         <Route path='/special' element={<Special/>}/>
       <Route path='/accountPage' element={<AccountPage/>}/>
        <Route path='/siteMap' element={<SiteMap/>}/> 
        <Route path='/brandPage' element={<BrandPage/>}/> 
-        <Route path='/trendingPrices' element={<TrendingPrices/>}/> 
+
+       <Route path='/trendingPrices' element={<TrendingPrices/>}/> 
+
+
+
      </Routes>
      
       <Footer/>
