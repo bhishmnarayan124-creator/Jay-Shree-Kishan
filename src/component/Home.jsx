@@ -13,8 +13,14 @@ import Search from './Searchbar/Search'
 
 import Products from './Products'
 // import BuySellForm from './CategoryData/BuySellForm'
+
 // import TrendingPrices from './CategoryData/TrendingPrices'
 // import EggRateTable from './CategoryData/EggRateTable'
+
+import TrendingPrices from './CategoryData/TrendingPrices'
+import EggRateTable from './CategoryData/EggRateTable'
+import MarketTable from './CategoryData/MarketTable'
+
 
 const Home = () => {
   return (
@@ -30,8 +36,14 @@ const Home = () => {
      
       <BlogSection/>
       {/* <BuySellForm/> */}
+
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
+
+       <TrendingPrices/>
+       <EggRateTable/>
+       <MarketTable/>
+
       
       
       
