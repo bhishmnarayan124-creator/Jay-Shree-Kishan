@@ -1,5 +1,7 @@
 import React from "react";
 import "./MarketTable.css";
+import Features from "../category/Category";
+import Search from "../Searchbar/Search";
 
 const MarketTable = () => {
   const markets = [
@@ -67,6 +69,9 @@ const MarketTable = () => {
   ];
 
   return (
+    <>
+    <Features/>
+    <Search/>
     <div className="market-container">
       {/* Export Buttons */}
       <div className="export-btns">
@@ -127,6 +132,7 @@ const MarketTable = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

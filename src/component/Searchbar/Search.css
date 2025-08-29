@@ -1,25 +1,59 @@
 .srch {
   width: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .srch input {
-  padding: 10px 40px 10px 20px;  /* extra space on right for icon */
+  padding: 10px 45px 10px 20px; /* space for icon */
   height: 50px;
-  width: 48%;
+  width: 50%;
+  max-width: 600px;
   border-radius: 50px;
   border: 2px solid #009688;
-  margin-left: 400px;
   font-size: 16px;
+  outline: none;
 }
 
 .srch .icn {
   position: absolute;
-  right: calc(29% - 30px); /* matches margin-left + input width */
+  right: calc(25% + 15px); /* keep aligned with input */
   top: 50%;
-  /* border: 2px solid #009688; */
   transform: translateY(-50%);
   color: #009688;
   font-size: 20px;
-  pointer-events: none; /* clicks go through icon to input */
+  pointer-events: none;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 1024px) {
+  .srch input {
+    width: 70%;
+  }
+  .srch .icn {
+    right: calc(15% + 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .srch input {
+    width: 80%;
+  }
+  .srch .icn {
+    right: calc(10% + 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .srch input {
+    width: 90%;
+    font-size: 14px;
+    height: 45px;
+  }
+  .srch .icn {
+    right: 30px;
+    font-size: 18px;
+  }
 }
