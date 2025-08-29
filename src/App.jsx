@@ -14,7 +14,7 @@ import AccountPage from './component/AccountPage/AccountPage'
 import BrandPage from './component/brand/BrandPage'
 import SiteMap from './component/sitemap/SiteMap'
 
-import SiteMap from './component/sitemap/SiteMap'
+
 
 import Special from './component/special/Special'
 
