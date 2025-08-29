@@ -13,17 +13,21 @@ import Search from './Searchbar/Search'
 
 import Products from './Products'
 
+
+import TrendingPrices from './CategoryData/TrendingPrices'
+
+
+
 import BuySellForm from './CategoryData/BuySellForm'
 
 
 
-// import TrendingPrices from './CategoryData/TrendingPrices'
-// import EggRateTable from './CategoryData/EggRateTable'
 
 
 import TrendingPrices from './CategoryData/TrendingPrices'
 import EggRateTable from './CategoryData/EggRateTable'
 import MarketTable from './CategoryData/MarketTable'
+
 
 
 const Home = () => {
@@ -46,6 +50,10 @@ const Home = () => {
 
       {/* <BuySellForm/> */}
 
+       <TrendingPrices/>
+       {/* <EggRateTable/> */}
+
+
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
 
@@ -54,7 +62,8 @@ const Home = () => {
 
        <MarketTable/>
 
-      
+
+     
       
       
 
