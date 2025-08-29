@@ -11,7 +11,9 @@ const Features = () => {
   const contentRef = useRef(null); 
   const [height, setHeight] = useState("0");
 
+  // ✅ Yaha har feature ka alag link diya hai
   const features = [
+<<<<<<< HEAD
     { icon: <FaPlus />, title: "Buy / Sell" },
     { icon:   <FiTrendingUp /> , title: "View Mandi Prices" },
     { icon: <FaUsers />, title: "View Buyers" },
@@ -20,9 +22,18 @@ const Features = () => {
     { icon: <Link to='/trendingPrices'><HiOutlineChartBar /></Link>, title: "Explore Mandi Price Trends", premium: true },
     { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true },
     { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App" },
+=======
+    { icon: <FaPlus />, title: "Buy / Sell", link: "/buySellForm" },
+    { icon: <FiTrendingUp />, title: "View Mandi Prices", link: "/mandi-prices" },
+    { icon: <FaUsers />, title: "View Buyers", link: "/buyers" },
+    { icon: <FaHandshake />, title: "View Sellers", link: "/sellers" },
+    { icon: <GiEggClutch />, title: "Egg Prices", link: "/egg-prices" },
+    { icon: <HiOutlineChartBar />, title: "Explore Mandi Price Trends", premium: true, link: "/trendingPrices" },
+    { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true, link: "/alerts" },
+    { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App", link: "/download-app" },
+>>>>>>> ce2b5017b5d7f40df20bc1c4b97a074f150336bb
   ];
 
-  
   useEffect(() => {
     if (showMore) {
       setHeight(`${contentRef.current.scrollHeight}px`);
@@ -36,20 +47,20 @@ const Features = () => {
       <div className="features-section">
         <h2>Explore Our Features</h2>
 
-       
-    <div className="features-grid">
+        {/* First 4 Features */}
+        <div className="features-grid">
           {features.slice(0, 4).map((f, i) => (
-            <div key={i} className="feature-card">
+            <Link to={f.link} key={i} className="feature-card">
               <div className="feature-icon">
                 {f.icon}
                 {f.premium && <span className="crown">★</span>}
               </div>
               <p>{f.title}</p>
-            </div>
+            </Link>
           ))}
         </div>
 
-        
+        {/* Collapsible Section */}
         <div
           className="slide-wrapper"
           style={{ maxHeight: height }}
@@ -57,18 +68,18 @@ const Features = () => {
         >
           <div className="m-features-grid">
             {features.slice(4).map((f, i) => (
-              <div key={i} className="m-feature-card">
+              <Link to={f.link} key={i} className="m-feature-card">
                 <div className="feature-icon">
                   {f.icon}
-                  <Link to='/trendingPrices'> {f.premium && <span className="crown">★</span>}</Link> 
+                  {f.premium && <span className="crown">★</span>}
                 </div>
                 <p>{f.title}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
 
-      
+        {/* Toggle Button */}
         <p 
           className="toggle-text" 
           onClick={() => setShowMore(!showMore)}
