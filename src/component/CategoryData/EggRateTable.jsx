@@ -15,20 +15,22 @@ const EggRateTable = () => {
 
   return (
     <div className="egg-container">
-      <h3>NECC Egg Rate Today In India</h3>
+      
 
       <table className="egg-table">
+        <h3>NECC Egg Rate Today In India</h3>
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
               <td>{item.label}</td>
-              <td>{item.value}</td>
+              <td><strong>{item.value}</strong></td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <p className="note">
+      <div className="note-class">
+        <p className="note">
         Stay updated on NECC's latest egg rates in India: ₹5.45 per piece or
         ₹544.96 per 100 eggs. 1 tray (approx. 30 eggs) is priced at ₹163.49,
         while 1 peti costs ₹1144.41. Crucial for industry professionals and
@@ -36,6 +38,7 @@ const EggRateTable = () => {
         and make informed purchases. Stay ahead in the market with these current
         prices for optimal decision-making.
       </p>
+      </div>
     </div>
   );
 };
