@@ -17,6 +17,7 @@ import SiteMap from './component/sitemap/SiteMap'
 
 import Special from './component/special/Special'
 import TrendingPrices from './component/CategoryData/TrendingPrices'
+import EggRateTable from './component/CategoryData/EggRateTable'
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
        <Route path='/brandPage' element={<BrandPage/>}/> 
 
        <Route path='/trendingPrices' element={<TrendingPrices/>}/> 
+       <Route path='/mandiprice' element={<EggRateTable/>}/> 
 
 
 

@@ -13,10 +13,10 @@ const Features = () => {
 
   const features = [
     { icon: <FaPlus />, title: "Buy / Sell" },
-    { icon: <FiTrendingUp />, title: "View Mandi Prices" },
+    { icon:   <FiTrendingUp /> , title: "View Mandi Prices" },
     { icon: <FaUsers />, title: "View Buyers" },
     { icon: <FaHandshake />, title: "View Sellers" },
-    { icon: <GiEggClutch />, title: "Egg Prices" },
+    { icon: <Link to='/mandiprice'><GiEggClutch /></Link>, title: "Egg Prices" },
     { icon: <Link to='/trendingPrices'><HiOutlineChartBar /></Link>, title: "Explore Mandi Price Trends", premium: true },
     { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true },
     { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App" },
