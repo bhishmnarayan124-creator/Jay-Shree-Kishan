@@ -15,9 +15,16 @@ import Collcard from './CategoryData/Collcard'
 
 
 
+import TrendingPrices from './CategoryData/TrendingPrices'
 
-// import TrendingPrices from './CategoryData/TrendingPrices'
-// import EggRateTable from './CategoryData/EggRateTable'
+
+
+import BuySellForm from './CategoryData/BuySellForm'
+
+
+
+
+
 
 
 
@@ -42,6 +49,10 @@ const Home = () => {
 
       {/* <BuySellForm/> */}
 
+       <TrendingPrices/>
+       {/* <EggRateTable/> */}
+
+
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
 
@@ -50,7 +61,8 @@ const Home = () => {
 
       
 
-      
+
+     
       
       
 
