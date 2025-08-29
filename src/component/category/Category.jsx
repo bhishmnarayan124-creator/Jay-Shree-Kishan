@@ -13,7 +13,7 @@ const Features = () => {
 
   // ✅ Yaha har feature ka alag link diya hai
   const features = [
-<<<<<<< HEAD
+
     { icon: <FaPlus />, title: "Buy / Sell" },
     { icon:   <FiTrendingUp /> , title: "View Mandi Prices" },
     { icon: <FaUsers />, title: "View Buyers" },
@@ -22,7 +22,7 @@ const Features = () => {
     { icon: <Link to='/trendingPrices'><HiOutlineChartBar /></Link>, title: "Explore Mandi Price Trends", premium: true },
     { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true },
     { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App" },
-=======
+
     { icon: <FaPlus />, title: "Buy / Sell", link: "/buySellForm" },
     { icon: <FiTrendingUp />, title: "View Mandi Prices", link: "/mandi-prices" },
     { icon: <FaUsers />, title: "View Buyers", link: "/buyers" },
@@ -31,7 +31,7 @@ const Features = () => {
     { icon: <HiOutlineChartBar />, title: "Explore Mandi Price Trends", premium: true, link: "/trendingPrices" },
     { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true, link: "/alerts" },
     { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App", link: "/download-app" },
->>>>>>> ce2b5017b5d7f40df20bc1c4b97a074f150336bb
+
   ];
 
   useEffect(() => {
