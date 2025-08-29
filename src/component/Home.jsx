@@ -4,12 +4,13 @@ import BlogSection from './BlogSection'
 import Banner from './banner/Banner'
 
 
-import Category from './category/Category'
 
 
 
 import Search from './Searchbar/Search'
 import Collcard from './CategoryData/Collcard'
+import Features from './category/Category'
+
 
 
 
@@ -35,11 +36,10 @@ const Home = () => {
     <div>
 
     
-      <Category/>
+      <Features/>
       <Search/>
       
       
-      {/* <Products/> */}
       <Banner/>
      
       <BlogSection/>
@@ -47,6 +47,8 @@ const Home = () => {
       
        
 
+<<<<<<< HEAD
+=======
       {/* <BuySellForm/> */}
 
        <TrendingPrices/>
@@ -58,6 +60,7 @@ const Home = () => {
 
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
+>>>>>>> 33f5301bd1f9f2b3f593e1dab22600246a300413
 
       
 

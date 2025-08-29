@@ -14,14 +14,14 @@ const Features = () => {
   // ✅ Yaha har feature ka alag link diya hai
   const features = [
 
-    { icon: <FaPlus />, title: "Buy / Sell" },
-    { icon:   <FiTrendingUp /> , title: "View Mandi Prices" },
-    { icon: <FaUsers />, title: "View Buyers" },
-    { icon: <FaHandshake />, title: "View Sellers" },
-    { icon: <Link to='/mandiprice'><GiEggClutch /></Link>, title: "Egg Prices" },
-    { icon: <Link to='/trendingPrices'><HiOutlineChartBar /></Link>, title: "Explore Mandi Price Trends", premium: true },
-    { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true },
-    { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App" },
+    // { icon: <FaPlus />, title: "Buy / Sell" },
+    // { icon:   <FiTrendingUp /> , title: "View Mandi Prices" },
+    // { icon: <FaUsers />, title: "View Buyers" },
+    // { icon: <FaHandshake />, title: "View Sellers" },
+    // { icon: <Link to='/mandiprice'><GiEggClutch /></Link>, title: "Egg Prices" },
+    // { icon: <Link to='/trendingPrices'><HiOutlineChartBar /></Link>, title: "Explore Mandi Price Trends", premium: true },
+    // { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true },
+    // { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App" },
 
     { icon: <FaPlus />, title: "Buy / Sell", link: "/buySellForm" },
     { icon: <FiTrendingUp />, title: "View Mandi Prices", link: "/marketTable" },
