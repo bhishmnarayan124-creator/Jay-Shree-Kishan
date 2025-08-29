@@ -21,7 +21,13 @@ import TrendingPrices from './component/CategoryData/TrendingPrices'
 import EggRateTable from './component/CategoryData/EggRateTable'
 =======
 import BuySellForm from './component/CategoryData/BuySellForm'
+<<<<<<< HEAD
+import MarketTable from './component/CategoryData/MarketTable'
+import CategoryPage from './component/CategoryData/Categories'
+import EggRateTable from './component/CategoryData/EggRateTable'
+=======
 >>>>>>> ce2b5017b5d7f40df20bc1c4b97a074f150336bb
+>>>>>>> 80d601ffb3d3142ada3c2a9a6c5ac310676b0df3
 
 const App = () => {
   return (
@@ -48,8 +54,14 @@ const App = () => {
 
 =======
         <Route path='/buySellForm' element={<BuySellForm/>}/> 
+<<<<<<< HEAD
+         <Route path='/marketTable' element={<MarketTable/>}/> 
+         <Route path='/categoryPage' element={<CategoryPage/>}/> 
+          <Route path='/eggRateTable' element={<EggRateTable/>}/> 
+=======
 >>>>>>> ce2b5017b5d7f40df20bc1c4b97a074f150336bb
 
+>>>>>>> 80d601ffb3d3142ada3c2a9a6c5ac310676b0df3
 
      </Routes>
      

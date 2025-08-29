@@ -1,8 +1,11 @@
 import React from "react";
 import "./TrendingPrices.css";
+import Features from "../category/Category";
 
 const TrendingPrices = () => {
   return (
+    <>
+    <Features/>
     <div className="pricing-container">
       <h2 className="title">Trade Smarter with Premium Mandi Data</h2>
       <p className="subtitle">
@@ -64,6 +67,7 @@ const TrendingPrices = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
