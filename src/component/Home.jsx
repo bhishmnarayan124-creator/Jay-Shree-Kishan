@@ -4,7 +4,6 @@ import BlogSection from './BlogSection'
 import Banner from './banner/Banner'
 
 
-import Category from './category/Category'
 
 
 
@@ -26,6 +25,8 @@ import TrendingPrices from './CategoryData/TrendingPrices'
 import BuySellForm from './CategoryData/BuySellForm'
 
 import Collcard from './CategoryData/Collcard'
+import Features from './category/Category'
+
 
 
 
@@ -50,11 +51,10 @@ const Home = () => {
     <div>
 
     
-      <Category/>
+      <Features/>
       <Search/>
       
       
-      {/* <Products/> */}
       <Banner/>
      
       <BlogSection/>
@@ -73,6 +73,8 @@ const Home = () => {
        
 
 
+<<<<<<< HEAD
+=======
       {/* <BuySellForm/> */}
 
        <TrendingPrices/>
@@ -85,7 +87,11 @@ const Home = () => {
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
 
- 
+      
+
+
+     
+      
       
 
     </div>
