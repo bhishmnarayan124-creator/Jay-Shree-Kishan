@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* body {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  background-color: #f9fafa;
+} */
+
+.card {
+  background: #fff;
+  border: 1px solid #c7cfd8;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promoted {
+  background-color: #007a77;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.share-icon {
+  color: #007a77;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.3rem;
+  color: #242f40;
+  margin: 0;
+  font-weight: 400;
+}
+
+.details-left {
+  color: #707070;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 60%;
+}
+
+.details-left strong {
+  font-weight: 700;
+  color: #242f40;
+}
+
+.details-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: auto;
+  min-width: 190px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #242f40;
+  font-weight: 700;
+}
+
+.detail-item .icon {
+  color: #888;
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.name {
+  color: red;
+  margin-left: 5px;
+}
+
+.location {
+  color: #242f40;
+}
+
+.bottom-section {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.call-btn {
+  background-color: #007a77;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: #005f5c;
+}
+
+.phone-icon {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.comments, .views {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #242f40;
+  gap: 6px;
+}
+
+.comments svg, .views svg {
+  color: #333;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .card {
+    padding: 15px 20px;
+  }
+  .details-left {
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  .details-right {
+    flex-direction: row;
+    gap: 30px;
+    min-width: auto;
+    margin-left: 0;
+  }
+  .bottom-section {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.1rem;
+  }
+  .call-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
