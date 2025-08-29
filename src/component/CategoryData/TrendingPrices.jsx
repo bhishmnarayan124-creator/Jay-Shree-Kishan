@@ -1,5 +1,6 @@
 import React from "react";
 import "./TrendingPrices.css";
+import Features from "../category/Category";
 
 const plans = [
   {
@@ -49,6 +50,8 @@ const plans = [
 
 const TrendingPrices = () => {
   return (
+    <>
+    <Features/>
     <div className="pricing-container">
       <h2>Trade Smarter with Premium Mandi Data</h2>
       <p className="subtitle">
@@ -73,6 +76,7 @@ const TrendingPrices = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

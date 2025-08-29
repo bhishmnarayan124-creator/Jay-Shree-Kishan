@@ -14,12 +14,12 @@ const Features = () => {
   // ✅ Yaha har feature ka alag link diya hai
   const features = [
     { icon: <FaPlus />, title: "Buy / Sell", link: "/buySellForm" },
-    { icon: <FiTrendingUp />, title: "View Mandi Prices", link: "/mandi-prices" },
-    { icon: <FaUsers />, title: "View Buyers", link: "/buyers" },
-    { icon: <FaHandshake />, title: "View Sellers", link: "/sellers" },
-    { icon: <GiEggClutch />, title: "Egg Prices", link: "/egg-prices" },
+    { icon: <FiTrendingUp />, title: "View Mandi Prices", link: "/marketTable" },
+    { icon: <FaUsers />, title: "View Buyers", link: "/categoryPage" },
+    { icon: <FaHandshake />, title: "View Sellers", link: "/categoryPage" },
+    { icon: <GiEggClutch />, title: "Egg Prices", link: "/eggRateTable" },
     { icon: <HiOutlineChartBar />, title: "Explore Mandi Price Trends", premium: true, link: "/trendingPrices" },
-    { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true, link: "/alerts" },
+    { icon: <FaBell />, title: "Alerts for Daily Price Changes", premium: true, link: "/trendingPrices" },
     { icon: <FaMobileAlt />, title: "Download KisanDeals Mobile App", link: "/download-app" },
   ];
 

@@ -18,6 +18,9 @@ import SiteMap from './component/sitemap/SiteMap'
 import Special from './component/special/Special'
 import TrendingPrices from './component/CategoryData/TrendingPrices'
 import BuySellForm from './component/CategoryData/BuySellForm'
+import MarketTable from './component/CategoryData/MarketTable'
+import CategoryPage from './component/CategoryData/Categories'
+import EggRateTable from './component/CategoryData/EggRateTable'
 
 const App = () => {
   return (
@@ -40,7 +43,9 @@ const App = () => {
 
        <Route path='/trendingPrices' element={<TrendingPrices/>}/> 
         <Route path='/buySellForm' element={<BuySellForm/>}/> 
-
+         <Route path='/marketTable' element={<MarketTable/>}/> 
+         <Route path='/categoryPage' element={<CategoryPage/>}/> 
+          <Route path='/eggRateTable' element={<EggRateTable/>}/> 
 
      </Routes>
      

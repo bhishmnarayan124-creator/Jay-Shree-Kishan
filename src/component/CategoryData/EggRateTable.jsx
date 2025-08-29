@@ -1,5 +1,8 @@
 import React from "react";
 import "./EggRateTable.css";
+import Features from "../category/Category";
+import Search from "../Searchbar/Search";
+import EggRates from "./EggRates";
 
 const EggRateTable = () => {
   const data = [
@@ -14,6 +17,9 @@ const EggRateTable = () => {
   ];
 
   return (
+    <>
+    <Features/>
+    <Search/>
     <div className="egg-container">
       <h3>NECC Egg Rate Today In India</h3>
 
@@ -37,6 +43,8 @@ const EggRateTable = () => {
         prices for optimal decision-making.
       </p>
     </div>
+    <EggRates/>
+    </>
   );
 };
 
