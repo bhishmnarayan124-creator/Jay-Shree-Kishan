@@ -70,11 +70,7 @@ const Home = () => {
 
       <Collcard/>
       
-       
 
-
-<<<<<<< HEAD
-=======
       {/* <BuySellForm/> */}
 
        <TrendingPrices/>
