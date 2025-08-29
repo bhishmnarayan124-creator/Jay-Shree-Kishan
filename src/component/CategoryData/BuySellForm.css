@@ -1,4 +1,5 @@
 .form-container {
+  
   max-width: 550px;
   margin: auto;
   padding: 20px;
@@ -7,6 +8,7 @@
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  margin: 40px auto;
 
 }
 
@@ -31,7 +33,15 @@ label {
   color: #444;
 }
 
-input, select, textarea {
+.commodity, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  width: 100%;
+}
+.name, select, textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -83,7 +93,7 @@ textarea {
 .name{
     font-size: 18px;
 }
-button {
+.Submit_1 {
   /* background: #0aa06e; */
   color: #009688;
   border: 2px solid #009688;
@@ -95,7 +105,7 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.Submit_1:hover {
   background: #08895d;
   color: white;
 }
