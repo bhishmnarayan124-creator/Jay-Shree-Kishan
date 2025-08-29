@@ -24,7 +24,7 @@ import BuySellForm from './component/CategoryData/BuySellForm'
 
 import MarketTable from './component/CategoryData/MarketTable'
 import CategoryPage from './component/CategoryData/Categories'
-import EggRateTable from './component/CategoryData/EggRateTable'
+
 
 const App = () => {
   return (
