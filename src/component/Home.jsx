@@ -16,6 +16,15 @@ import Features from './category/Category'
 
 
 
+import TrendingPrices from './CategoryData/TrendingPrices'
+
+
+
+import BuySellForm from './CategoryData/BuySellForm'
+
+
+
+
 
 
 
@@ -38,10 +47,25 @@ const Home = () => {
       
        
 
+<<<<<<< HEAD
+=======
+      {/* <BuySellForm/> */}
+
+       <TrendingPrices/>
+       {/* <EggRateTable/> */}
+
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+>>>>>>> 33f5301bd1f9f2b3f593e1dab22600246a300413
 
       
 
-      
+
+     
       
       
 
