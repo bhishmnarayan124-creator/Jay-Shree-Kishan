@@ -26,7 +26,7 @@ const Home = () => {
       <BlogSection/>
 
       <Special/>
-      <Footer/>
+ 
 
       
       
