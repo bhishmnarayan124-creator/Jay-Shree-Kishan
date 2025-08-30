@@ -141,7 +141,7 @@ const Collcard = () => {
         )}
       </div>
 
-      {/* 🔽 View More / View Less */}
+      {/* 🔽 View More / View Le/ss */}
       {filteredData.length > 3 && (
         <div className="view-btn-box">
           <button className="view-btn"

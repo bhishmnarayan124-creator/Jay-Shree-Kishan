@@ -43,16 +43,6 @@ const Home = () => {
       <BlogSection/>
       <Collcard/>
       
-<<<<<<< HEAD
-=======
-       
-
-HEAD
-      <Special/>
- 
-
-HEAD
-
       {/* <BuySellForm/> */}
 
        <TrendingPrices/>
@@ -65,14 +55,6 @@ HEAD
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
 
-      
-
-
-     
-      
-      
-
->>>>>>> e62dc27a79ba10df2e847cc5383d0f5713b93aa3
     </div>
   )
 }
