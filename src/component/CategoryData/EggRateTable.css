@@ -26,15 +26,20 @@
 
 .egg-table {
   width: 100%;
+  height: 475px;
   border-collapse: collapse;
   margin-bottom: 20px;
     /* border: 2px solid; */
-  box-shadow: 3px 3px 3px 3px rgb(226, 218, 218);
+  box-shadow: 2px 2px 2px 2px rgb(226, 218, 218);
   background-color: white;
+  border-radius: 10px;
 }
 
 .egg-table:hover{
-  border:2px solid #008577
+  border:2px solid #009688;
+    box-shadow: 4px 4px 4px 3px rgb(244, 236, 236);
+    transition: 0.1s ;
+    /* border-radius: 10px; */
 }
 
 .egg-table td {
@@ -56,23 +61,26 @@
 } */
 .note-class{
   width: 1050px;
-  background-color: white;
+  /* background-color: white; */
+  /* height: 100px; */
 }
-.note {
+.notes {
   font-size: 18px;
   color: #444;
-  /* background: #f9f9f9; */
+  background: #f9f9f9;
   padding: 12px;
   border-radius: 6px;
   /* line-height: 0.5; */
   font-family: 'Helvetica Neue', Arial, sans-serif;
    border: 2px solid #fafcfc;
+  
 }
 
-.note-class:hover{
+ .notes:hover{
     border:2px solid #008577;
+    transition: 0.5s;
     
-}
+} 
 @media (max-width: 600px) {
   .egg-container {
     padding: 15px;
@@ -84,7 +92,7 @@
     font-size: 12px;
     padding: 8px;
   }
-  .note {
+  .notes {
     font-size: 12px;
   }
 }
