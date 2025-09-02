@@ -7,6 +7,7 @@ import Banner from './banner/Banner'
 
 
 
+
 import Search from './Searchbar/Search'
 import Collcard from './CategoryData/Collcard'
 import Features from './category/Category'
@@ -17,6 +18,7 @@ import Features from './category/Category'
 
 
 import TrendingPrices from './CategoryData/TrendingPrices'
+import Special from './special/Special'
 
 
 
@@ -47,11 +49,10 @@ const Home = () => {
       
        
 
-HEAD
-      <Special/>
- 
 
-HEAD
+      <Special/>
+
+
 
       {/* <BuySellForm/> */}
 
