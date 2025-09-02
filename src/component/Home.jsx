@@ -3,13 +3,7 @@ import BlogSection from './BlogSection'
 
 import Banner from './banner/Banner'
 
-
-
-
-
 import Search from './Searchbar/Search'
-
-
 
 import Products from './Products'
 
@@ -17,33 +11,10 @@ import Products from './Products'
 import TrendingPrices from './CategoryData/TrendingPrices'
 // import EggRateTable from './CategoryData/EggRateTable'
 
-
-
-
-
-
 import BuySellForm from './CategoryData/BuySellForm'
 
 import Collcard from './CategoryData/Collcard'
 import Features from './category/Category'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const Home = () => {
@@ -56,40 +27,21 @@ const Home = () => {
       
       
       <Banner/>
-     
       <BlogSection/>
-
       {/* <BuySellForm/> */}
        <TrendingPrices/>
        {/* <EggRateTable/> */}
-
-
       <BuySellForm/>
        <TrendingPrices/>
        {/* <EggRateTable/> */}
-
       <Collcard/>
-      
-
       {/* <BuySellForm/> */}
-
        <TrendingPrices/>
        {/* <EggRateTable/> */}
-
-
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
-
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
-
-      
-
-
-     
-      
-      
-
     </div>
   )
 }
