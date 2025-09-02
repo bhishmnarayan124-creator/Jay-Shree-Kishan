@@ -18,18 +18,8 @@ const Home = () => {
       <Collcard/>
 
 
-<<<<<<< HEAD
-      {/* <BuySellForm/> */}
-
        <TrendingPrices/>
-       {/* <EggRateTable/> */}
-
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
+      
 
 
       
@@ -39,14 +29,14 @@ const Home = () => {
       
       
 
-=======
+
       <Special/>
  
 
 
 
        <TrendingPrices/>
->>>>>>> faf70bf2da6868799882a81d8f42ab69685e506e
+
     </div>
   )
 }
