@@ -13,6 +13,19 @@ const Home = () => {
       <Search/>
       <Banner/>
       <BlogSection/>
+
+
+      <Collcard/>
+      
+       
+
+
+      <Special/>
+ 
+
+
+
+       <TrendingPrices/>
     </div>
   )
 }
