@@ -1,106 +1,108 @@
 .form-container {
-  max-width: 1200px;
-  margin: 40px auto;
+  
+  max-width: 550px;
+  margin: auto;
   padding: 20px;
   background: #ffffff;
   border: 2px solid #ddd;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  margin: 40px auto;
+
 }
 
-.form-container:hover {
-  border: 2px solid #009688;
+.form-container:hover{
+    border: 2px solid #009688;
+  
 }
-
 h3, h4 {
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   color: #333;
-  font-size: 20px;
 }
 
-/* Inputs */
-input, select, textarea {
-  padding: 8px;
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 17px;
+  margin: 8px 0 4px;
+  color: #444;
+}
+
+.commodity, select, textarea {
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 12px;
+  font-size: 16px;
   width: 100%;
-  min-height: 38px;
+}
+.name, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  width: 100%;
 }
 
 textarea {
   resize: none;
-  height: 60px;
+  height: 70px;
 }
 
-/* Row for 4 inputs */
-.row {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-}
-
-.row .input-box {
-  flex: 1 1 calc(25% - 12px); /* 4 inputs per row */
-  display: flex;
-  flex-direction: column;
-  min-width: 200px;
-}
-
-/* Checkboxes */
 .checkbox-group {
   display: flex;
+  
   flex-direction: column;
-  margin: 10px 0;
+  margin-bottom: 12px;
 }
 
 .checkbox-group label {
-  font-size: 13px;
-  margin: 3px 0;
-  color: #444;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  font-size: 16px;
+  margin: 4px 0;
+  /* margin-top: 10px; */
+  /* padding: px 0px; */
 }
-
-.checkbox-group input {
-  width: 14px;   /* छोटा checkbox */
-  height: 14px;
-  margin: 0;
-  transform: scale(1);
+.checkbox-group input{
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    margin-top: 8px;
 }
-
-/* Terms bottom small checkbox */
 .terms {
-  font-size: 13px;
+  font-size: 18px;
   margin: 12px 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
-
-.terms input {
-  width: 14px;
-  height: 14px;
+.terms input{
+    width: 18px;
+    height: 18px;
+    /* margin-right: 8px; */
+    margin-top: 2px;
+    margin-left: 10px;
+    
 }
-
-/* Submit Button */
+.Your{
+    font-size: 23px;
+    margin: 15px 0px;
+}
+.name{
+    font-size: 18px;
+}
 .Submit_1 {
+  /* background: #0aa06e; */
   color: #009688;
   border: 2px solid #009688;
-  background: white;
-  padding: 10px;
-  border-radius: 50px;
-  font-size: 16px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 60px;
+  font-size: 20px;
   cursor: pointer;
   transition: 0.3s;
-  width: 180px;
-  margin: 18px auto 0;
-  display: block;
 }
 
 .Submit_1:hover {
@@ -108,26 +110,9 @@ textarea {
   color: white;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .row .input-box {
-    flex: 1 1 calc(25% - 12px); /* Tablet: 4 inputs per row */
-  }
-  .form-container {
-    max-width: 90%;
-    padding: 18px;
-  }
-  
-}
-
 @media (max-width: 600px) {
-  .row .input-box {
-    flex: 1 1 25%; /* Mobile: 4 inputs per row */
-  }
   .form-container {
     max-width: 95%;
-  }
-  .Submit_1 {
-    width: 80%;
+    padding: 15px;
   }
 }

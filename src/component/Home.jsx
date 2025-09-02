@@ -49,7 +49,10 @@ const Home = () => {
       <Search/>
       <Banner/>
       <BlogSection/>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 329bff748bd1fb861c94151718104bf2663d9b2e
     </div>
   )
 }
