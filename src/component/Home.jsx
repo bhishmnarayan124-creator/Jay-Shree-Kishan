@@ -43,24 +43,12 @@ const Home = () => {
       <Banner/>
      
       <BlogSection/>
-      <Collcard/>
-      
+     
        
 
-<<<<<<< HEAD
-=======
-      {/* <BuySellForm/> */}
-
-       <TrendingPrices/>
-       {/* <EggRateTable/> */}
 
 
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
->>>>>>> 33f5301bd1f9f2b3f593e1dab22600246a300413
+    
 
       
 
