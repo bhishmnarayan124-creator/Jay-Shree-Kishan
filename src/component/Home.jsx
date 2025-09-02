@@ -1,7 +1,8 @@
 import React from 'react'
 import BlogSection from './BlogSection'
-
 import Banner from './banner/Banner'
+
+
 
 
 
@@ -33,44 +34,43 @@ import Special from './special/Special'
 
 
 
+
 const Home = () => {
   return (
     <div>
-
-    
       <Features/>
       <Search/>
-      
-      
       <Banner/>
-     
       <BlogSection/>
-      <Collcard/>
-      
-       
+
 
 
       <Special/>
 
 
 
-      {/* <BuySellForm/> */}
+
+      <Collcard/>
+
 
        <TrendingPrices/>
-       {/* <EggRateTable/> */}
+      
 
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
 
       
 
 
      
       
+      
+
+
+      
+ 
+
+
+
+
       
 
     </div>
