@@ -5,6 +5,7 @@ import { assets } from "../../assets/assets";
 const Banner = () => {
   return (
     <>
+    
       {/* 🔹 Banner Section */}
       <div className="container12">
         <div className="banner12">
