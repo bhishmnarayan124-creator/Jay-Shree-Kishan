@@ -15,6 +15,33 @@ const Home = () => {
       <Search/>
       <Banner/>
       <BlogSection/>
+<<<<<<< HEAD
+=======
+
+
+      <Collcard/>
+
+
+       <TrendingPrices/>
+      
+
+
+      
+
+
+     
+      
+      
+
+
+      <Special/>
+ 
+
+
+
+       <TrendingPrices/>
+
+>>>>>>> fd1e99113344b59ca201926742448bcbeca44f21
     </div>
   )
 }
