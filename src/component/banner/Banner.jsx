@@ -8,7 +8,6 @@ const Banner = () => {
 
 
 
-    
       {/* 🔹 Banner Section */}
       <div className="container12">
         <div className="banner12">
