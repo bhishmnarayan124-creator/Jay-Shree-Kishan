@@ -42,10 +42,30 @@ import Special from './special/Special'
 const Home = () => {
   return (
     <div>
+
+      
+      
+
       <Features/>
       <Search/>
+
       <Banner/>
       <BlogSection/>
+
+      <Collcard/>
+      
+      {/* <BuySellForm/> */}
+
+       <TrendingPrices/>
+       {/* <EggRateTable/> */}
+
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+
 
     </div>
   )
