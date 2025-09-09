@@ -2,49 +2,44 @@ import React, { useState } from 'react'
 import './Search.css'
 import { FiSearch } from "react-icons/fi";
 
+import { data } from 'react-router-dom';
+import { categories } from '../../assets/assets';
 const Search = () => {
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
+ const [query, setQuery] = useState("")
+ const [results, setResults] = useState([]);
 
-  const handleSearch = async (e) => {
-    const value = e.target.value;
-    setQuery(value);
 
-    if (value.trim() !== "") {
-      const res = await fetch(`http://localhost:5000/api/search?q=${value}`);
-      const data = await res.json();
-      setResults(data);
-    } else {
-      setResults([]);
-    }
-  };
+ const handleSearch = ()=>{
+  const trimedQuery = query.trim().toLowerCase();
+  if (!trimedQuery){
+    setResults([]);
+    return;
+  }
 
-  // ✅ Suggestion select karne par input me set karo
-  const handleSelect = (name) => {
-    setQuery();     // input box update
-    setResults([]);     // list hide
-  };
+  const filtered = categories.filter((item)=>
+    item.toLowerCase().includes(trimedQuery)
+  );
+  setResults(filtered);
+ }
 
   return (
     <div className='srch'>
-      <input
-        type="text"
-        value={query}
-        onChange={handleSearch}
-        placeholder='search'
-      />
-      <FiSearch className='icn'/>
 
-      {results.length > 0 && (
-        <div className="results">
-          {results.map((item) => (
-            <p key={item._id} onClick={() => handleSelect(item.name)}>
-              {item.name}
-            </p>
-          ))}
-        </div>
-      )}
+      <input type="text" value={query} onChange={(e)=> setQuery(e.target.value) } placeholder='search' onKeyDown={(e) => { if (e.key === 'Enter') { handleSearch();}}} />
+      <FiSearch onClick={handleSearch}  className='icn'/>
+      
     </div>
+
+    <ul className='results-list'>
+        {results.length > 0 ? (
+          results.map((item, index) => <li key={index}>{item}</li>)
+        ) : (
+          query && <li>No results found</li>
+        )}
+      </ul>
+
+    </>    
+
   )
 }
 

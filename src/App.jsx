@@ -36,39 +36,33 @@ const App = () => {
     <div>
       <Navbar/>
       <MenuBar/>
-       <PopupModal/>
-     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/productpage' element={<ProductPage/>}/>
+      <PopupModal/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/productpage' element={<ProductPage/>}/>
 
-      <Route path='/brandPage' element={<BrandPage/>}/>
+        <Route path='/brandPage' element={<BrandPage/>}/>
 
         <Route path='/special' element={<Special/>}/>
-      <Route path='/accountPage' element={<AccountPage/>}/>
-       <Route path='/siteMap' element={<SiteMap/>}/> 
-       <Route path='/brandPage' element={<BrandPage/>}/> 
+        <Route path='/accountPage' element={<AccountPage/>}/>
+        <Route path='/siteMap' element={<SiteMap/>}/> 
+        <Route path='/brandPage' element={<BrandPage/>}/> 
 
-       <Route path='/trendingPrices' element={<TrendingPrices/>}/> 
+        <Route path='/trendingPrices' element={<TrendingPrices/>}/> 
 
-       <Route path='/mandiprice' element={<EggRateTable/>}/> 
+        <Route path='/mandiprice' element={<EggRateTable/>}/> 
 
 
         <Route path='/buySellForm' element={<BuySellForm/>}/> 
 
 
-         <Route path='/marketTable' element={<MarketTable/>}/> 
-         <Route path='/categoryPage' element={<CategoryPage/>}/> 
-          <Route path='/eggRateTable' element={<EggRateTable/>}/> 
-
-
-
-
-
-         
+        <Route path='/marketTable' element={<MarketTable/>}/> 
+        <Route path='/categoryPage' element={<CategoryPage/>}/> 
+        <Route path='/eggRateTable' element={<EggRateTable/>}/> 
          
 
-     </Routes>
+      </Routes>
      
       <Footer/>
 

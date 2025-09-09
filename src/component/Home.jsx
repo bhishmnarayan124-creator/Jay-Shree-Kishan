@@ -33,14 +33,37 @@ import ProductList from './CategoryData/ProductList'
 const Home = () => {
   return (
     <div>
+
+      
+      
+
       <Features/>
       <Search/>
+
        <ProductList/>
        
       <Banner/>
       <BlogSection/>
 
      
+
+
+      <Collcard/>
+      
+      {/* <BuySellForm/> */}
+
+       <TrendingPrices/>
+       {/* <EggRateTable/> */}
+
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+
+
+
     </div>
   )
 }

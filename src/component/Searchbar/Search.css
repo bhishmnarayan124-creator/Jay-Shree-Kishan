@@ -17,15 +17,31 @@
   outline: none;
 }
 
+
 /* ✅ Search icon input ke andar right side fix */
 .srch .icn {
   position: absolute;
   right: 30%;  
+
+ .icn {
+  position: absolute;
+  right: calc(31% + 15px); /* keep aligned with input */
+
   top: 50%;
   transform: translateY(-50%);
   color: #009688;
   font-size: 20px;
-  pointer-events: none;
+  /* pointer-events: none; */
+  cursor: pointer;
+}
+
+.results-list {
+  list-style: none;
+  padding-left: 0;
+}
+.results-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 /* ✅ Results list input ke just neeche align hogi */
