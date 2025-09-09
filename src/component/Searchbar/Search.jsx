@@ -23,6 +23,7 @@ const Search = () => {
  }
 
   return (
+    <>
     <div className='srch'>
 
       <input type="text" value={query} onChange={(e)=> setQuery(e.target.value) } placeholder='search' onKeyDown={(e) => { if (e.key === 'Enter') { handleSearch();}}} />
