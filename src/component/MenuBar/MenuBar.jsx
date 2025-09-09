@@ -64,8 +64,9 @@ const MenuBar = () => {
           )}
         </li>
 
+
         <li><Link to="/">Home</Link></li>
-        <li><a href="#">Specials</a></li>
+        <li><Link to='/special'>Specials</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to='/siteMap'>Sitemap</Link></li> 
         <li><Link to='/brandPage'>Brand</Link></li> 

@@ -1,10 +1,23 @@
 // Navbar.jsx
-import React from "react";
+import React, { useState } from "react";
 import "./Navber.css";
 import { FaHeart, FaUser, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [query, setQuery] = useState("");
+
+   const handleSearch = () => {
+    if (query.trim() === "") {
+      alert("Please enter something to search.");
+      return;
+    }
+    console.log("searching for :",query)
+  }
+
+
+
+   console.log("Searching for:", query);
   return (
     <div className="navbar">
     
@@ -17,8 +30,9 @@ const Navbar = () => {
 
      
       <div className="navbar-search">
-        <input type="text" placeholder="Search" />
-        <button>Search</button>
+        <input type="text" placeholder="Search"  value={query}
+        onChange={(e) => setQuery(e.target.value)}/>
+        <button onClick={handleSearch}>Search</button>
       </div>
 
       

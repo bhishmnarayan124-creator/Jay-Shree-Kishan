@@ -1,36 +1,68 @@
 import React from 'react'
 import BlogSection from './BlogSection'
-import Navbar from './Navber/Navber'
-import Footer from './Footer/Footer'
-import MenuBar from './MenuBar/MenuBar'
 import Banner from './banner/Banner'
 
-import Special from './special/Special'
-import Category from './category/Category'
+import Search from './Searchbar/Search'
 
-import ProductPage from './ProductPage/ProductPage'
-import Products from './Products'
+
+import Features from './category/Category'
+import ProductList from './CategoryData/ProductList'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const Home = () => {
   return (
     <div>
 
-    
-      <Category/>
-
       
       
 
+      <Features/>
+      <Search/>
+
+       <ProductList/>
+       
       <Banner/>
-      <Products/>
       <BlogSection/>
 
-      <Special/>
-      <Footer/>
+     
 
+
+      <Collcard/>
       
-      
-      
+      {/* <BuySellForm/> */}
+
+       <TrendingPrices/>
+       {/* <EggRateTable/> */}
+
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+
+       {/* <TrendingPrices/> */}
+       {/* <EggRateTable/> */}
+
+
 
     </div>
   )
