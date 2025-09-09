@@ -2,28 +2,19 @@ import React from 'react'
 import BlogSection from './BlogSection'
 import Banner from './banner/Banner'
 
-
-
-
-
-
-
-
-
-
-
 import Search from './Searchbar/Search'
 
 
 import Features from './category/Category'
+import ProductList from './CategoryData/ProductList'
 
 
 
 
 
 
-import TrendingPrices from './CategoryData/TrendingPrices'
-import Special from './special/Special'
+
+
 
 
 
@@ -49,8 +40,13 @@ const Home = () => {
       <Features/>
       <Search/>
 
+       <ProductList/>
+       
       <Banner/>
       <BlogSection/>
+
+     
+
 
       <Collcard/>
       
@@ -65,6 +61,7 @@ const Home = () => {
 
        {/* <TrendingPrices/> */}
        {/* <EggRateTable/> */}
+
 
 
     </div>

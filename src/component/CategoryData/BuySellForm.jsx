@@ -30,11 +30,41 @@ const BuySellForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Form submitted successfully!");
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form Submitted:", formData);
+  //   alert("Form submitted successfully!");
+  // };
+
+   const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const formDataToSend = new FormData();
+    for (const key in formData) {
+      formDataToSend.append(key, formData[key]);
+    }
+
+    const res = await fetch("http://localhost:5000/api/products", {
+      method: "POST",
+      body: formDataToSend,
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      alert("✅ Form submitted successfully!");
+      console.log("Saved Product:", data.product);
+    } else {
+      alert("❌ Error: " + data.error);
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("❌ Something went wrong!");
+  }
+};
+
+ 
+
 
   return (
     <div className="form-container">

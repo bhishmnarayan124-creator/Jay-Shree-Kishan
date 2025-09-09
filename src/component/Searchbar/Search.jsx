@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Search.css'
 import { FiSearch } from "react-icons/fi";
+
 import { data } from 'react-router-dom';
 import { categories } from '../../assets/assets';
 const Search = () => {
@@ -20,9 +21,10 @@ const Search = () => {
   );
   setResults(filtered);
  }
+
   return (
-    <>
     <div className='srch'>
+
       <input type="text" value={query} onChange={(e)=> setQuery(e.target.value) } placeholder='search' onKeyDown={(e) => { if (e.key === 'Enter') { handleSearch();}}} />
       <FiSearch onClick={handleSearch}  className='icn'/>
       
@@ -37,6 +39,7 @@ const Search = () => {
       </ul>
 
     </>    
+
   )
 }
 
