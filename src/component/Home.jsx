@@ -42,7 +42,7 @@ const Home = () => {
      
       <BlogSection/>
       <Collcard/>
-      
+
       {/* <BuySellForm/> */}
 
        <TrendingPrices/>
