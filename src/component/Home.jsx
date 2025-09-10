@@ -48,20 +48,9 @@ const Home = () => {
      
 
 
-      <Collcard/>
       
-      {/* <BuySellForm/> */}
-
-       <TrendingPrices/>
-       {/* <EggRateTable/> */}
-
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
+      
+    
 
 
     </div>
