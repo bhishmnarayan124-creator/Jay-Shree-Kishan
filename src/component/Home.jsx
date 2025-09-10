@@ -8,6 +8,7 @@ import Search from './Searchbar/Search'
 import Features from './category/Category'
 import ProductList from './CategoryData/ProductList'
 
+import TrendingPrices from './CategoryData/TrendingPrices'
 
 
 
@@ -48,20 +49,9 @@ const Home = () => {
      
 
 
-      <Collcard/>
+    
       
-      {/* <BuySellForm/> */}
-
-       <TrendingPrices/>
-       {/* <EggRateTable/> */}
-
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
+     
 
 
     </div>
