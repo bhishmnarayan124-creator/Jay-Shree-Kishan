@@ -8,6 +8,7 @@ import Search from './Searchbar/Search'
 import Features from './category/Category'
 import ProductList from './CategoryData/ProductList'
 
+import TrendingPrices from './CategoryData/TrendingPrices'
 
 
 
@@ -48,9 +49,6 @@ const Home = () => {
      
 
 
-      
-      
-    
 
 
     </div>
