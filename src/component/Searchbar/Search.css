@@ -7,7 +7,7 @@
 }
 
 .srch input {
-  padding: 10px 45px 10px 20px; /* space for icon */
+  padding: 10px 45px 10px 20px; /* right padding for icon */
   height: 50px;
   width: 50%;
   max-width: 600px;
@@ -17,14 +17,53 @@
   outline: none;
 }
 
-.srch .icn {
+
+/* ✅ Search icon input ke andar right side fix */
+
+ .icn {
   position: absolute;
-  right: calc(25% + 15px); /* keep aligned with input */
+  right: calc(31% + 15px); /* keep aligned with input */
+
   top: 50%;
   transform: translateY(-50%);
   color: #009688;
   font-size: 20px;
-  pointer-events: none;
+  /* pointer-events: none; */
+  cursor: pointer;
+}
+
+.results-list {
+  list-style: none;
+  padding-left: 0;
+}
+.results-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Results list input ke just neeche align hogi */
+.results {
+  position: absolute;
+  top: 100%;  /* input ke neeche */
+  width: 50%;  /* same width as input */
+  max-width: 600px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 5px;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.results p {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.results p:hover {
+  background: #f0f0f0;
 }
 
 /* ✅ Responsive Styles */
@@ -33,7 +72,10 @@
     width: 70%;
   }
   .srch .icn {
-    right: calc(15% + 15px);
+    right: 17%;
+  }
+  .results {
+    width: 70%;
   }
 }
 
@@ -42,7 +84,10 @@
     width: 80%;
   }
   .srch .icn {
-    right: calc(10% + 15px);
+    right: 12%;
+  }
+  .results {
+    width: 80%;
   }
 }
 
@@ -53,7 +98,10 @@
     height: 45px;
   }
   .srch .icn {
-    right: 30px;
+    right: 8%;
     font-size: 18px;
+  }
+  .results {
+    width: 90%;
   }
 }

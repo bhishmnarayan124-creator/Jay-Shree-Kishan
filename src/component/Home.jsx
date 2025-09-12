@@ -1,22 +1,22 @@
 import React from 'react'
 import BlogSection from './BlogSection'
-
 import Banner from './banner/Banner'
 
-
-
-
-
 import Search from './Searchbar/Search'
-import Collcard from './CategoryData/Collcard'
+
+
 import Features from './category/Category'
-
-
-
-
-
+import ProductList from './CategoryData/ProductList'
 
 import TrendingPrices from './CategoryData/TrendingPrices'
+
+
+
+
+
+
+
+
 
 
 
@@ -35,9 +35,12 @@ const Home = () => {
   return (
     <div>
 
-    
+      
+      
+
       <Features/>
       <Search/>
+<<<<<<< HEAD
       
       
       <Banner/>
@@ -61,10 +64,18 @@ const Home = () => {
 
       
 
+=======
+
+       <ProductList/>
+       
+      <Banner/>
+      <BlogSection/>
+>>>>>>> 1072bb224144f993954e1375458b3329dc632537
 
      
-      
-      
+
+
+
 
     </div>
   )
