@@ -50,7 +50,7 @@ const ProductList = () => {
                 Qty Required: <b>{p.quantity} </b>
               </p>
               <p>
-                Posted On: <b>5 hours ago</b>
+                Posted On: <b>5 hours ago</b> 
               </p>
 
               <div className="user-info">

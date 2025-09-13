@@ -19,9 +19,6 @@
 
 
 /* ✅ Search icon input ke andar right side fix */
-.srch .icn {
-  position: absolute;
-  right: 30%;  
 
  .icn {
   position: absolute;
