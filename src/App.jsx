@@ -9,7 +9,7 @@ import Footer from './component/Footer/Footer'
 import Contact from './pages/Contact/Contact'
 import ProductPage from './component/ProductPage/ProductPage'
 import PopupModal from './component/PopupModal/PopupModal'
-import AccountPage from './component/AccountPage/AccountPage'
+import AccountPage from './component/AccountPage/SignIn'
   
 import BrandPage from './component/brand/BrandPage'
 
@@ -26,6 +26,8 @@ import MarketTable from './component/CategoryData/MarketTable'
 import CategoryPage from './component/CategoryData/Categories'
 
 import EggRateTable from './component/CategoryData/EggRateTable'
+import SignUp from './component/AccountPage/SingUp'
+import { UserProvider } from './component/UserContext'
 
 
 
@@ -34,7 +36,9 @@ const App = () => {
   return (
     <>
     <div>
+      <UserProvider>
       <Navbar/>
+      
       <MenuBar/>
       <PopupModal/>
       <Routes>
@@ -45,7 +49,8 @@ const App = () => {
         <Route path='/brandPage' element={<BrandPage/>}/>
 
         <Route path='/special' element={<Special/>}/>
-        <Route path='/accountPage' element={<AccountPage/>}/>
+        <Route path='/signIn' element={<AccountPage/>}/>
+        <Route path='/signUp' element={<SignUp/>}/>
         <Route path='/siteMap' element={<SiteMap/>}/> 
         <Route path='/brandPage' element={<BrandPage/>}/> 
 
@@ -60,12 +65,12 @@ const App = () => {
         <Route path='/marketTable' element={<MarketTable/>}/> 
         <Route path='/categoryPage' element={<CategoryPage/>}/> 
         <Route path='/eggRateTable' element={<EggRateTable/>}/> 
-         
+           {/* <Route path='/login' element={<Login/>}/>  */}
 
       </Routes>
      
       <Footer/>
-
+    </UserProvider>
     </div>
     </>
   )

@@ -10,26 +10,6 @@ import ProductList from './CategoryData/ProductList'
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Home = () => {
   return (
     <div>
@@ -48,22 +28,7 @@ const Home = () => {
      
 
 
-      <Collcard/>
       
-      {/* <BuySellForm/> */}
-
-       <TrendingPrices/>
-       {/* <EggRateTable/> */}
-
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
-       {/* <TrendingPrices/> */}
-       {/* <EggRateTable/> */}
-
-
-
     </div>
   )
 }
