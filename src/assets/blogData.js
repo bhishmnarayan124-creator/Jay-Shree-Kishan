@@ -28,7 +28,7 @@ const blogData = [
   {
     id: 1,
     img: slider,
-    title: "Quisque Sit Amet mi Vel Quam Fringilla porttitor Sed Vitae Ante",
+    title: "Quisque Sit Amet mi Vel Quam porttitor Sed Vitae Ante",
     date: "March 15, 2025",
     comments: "5 Comments",
   },

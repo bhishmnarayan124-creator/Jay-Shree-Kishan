@@ -11,26 +11,6 @@ import ProductList from './CategoryData/ProductList'
 import TrendingPrices from './CategoryData/TrendingPrices'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Home = () => {
   return (
     <div>
@@ -47,7 +27,6 @@ const Home = () => {
       <BlogSection/>
 
      
-
 
 
 
