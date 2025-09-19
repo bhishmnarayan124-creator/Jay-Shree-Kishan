@@ -1,34 +1,76 @@
 import React, { useEffect, useState } from "react";
 import "./ProductList.css";
-import { FaPhoneAlt, FaCommentDots, FaEye, FaShareAlt, FaMapMarkerAlt, FaUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
-
-
+import {
+  FaPhoneAlt,
+  FaCommentDots,
+  FaEye,
+  FaShareAlt,
+  FaMapMarkerAlt,
+  FaUserCircle,
+} from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 const ProductList = () => {
+  const [activeTab, setActiveTab] = useState("buyers"); // buyers | sellers
   const [products, setProducts] = useState([]);
+  const location = useLocation();
 
+  const queryParams = new URLSearchParams(location.search);
+  const selectedCategory = queryParams.get("category");
+
+  // fetch products based on active tab
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    let url = `http://localhost:5000/api/products?type=${activeTab}`;
+    if (selectedCategory) {
+      url += `&category=${selectedCategory}`; // backend में filter
+    }
+
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
           setProducts(data.products);
+        } else {
+          setProducts([]);
         }
       })
-      .catch((err) => console.error("❌ Error fetching products:", err));
-  }, []);
+      .catch((err) =>
+        console.error("❌ Error fetching products:", err)
+      );
+  }, [activeTab, selectedCategory]);
 
   return (
     <div className="product-list">
-      <h2> Listed Products</h2>
+      {/* Tabs */}
+      <div className="tabs">
+        <button
+          className={activeTab === "buyers" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("buyers")}
+        >
+          Buyers
+        </button>
+        <button
+          className={activeTab === "sellers" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("sellers")}
+        >
+          Sellers
+        </button>
+      </div>
+
+      <h2>
+        {activeTab === "buyers" ? "Buyer Requirements" : "Seller Listings"}{" "}
+        {selectedCategory && `for ${selectedCategory}`}
+      </h2>
+
       {products.length === 0 ? (
-        <p>No products available</p>
+        <p>No {activeTab} available</p>
       ) : (
         <div className="cards">
           {products.map((p) => (
             <div key={p._id} className="product-card">
-              <span className="tag">Promoted</span>
+              <span className="tag">
+                {activeTab === "buyers" ? "Requirement" : "Promoted"}
+              </span>
 
               {/* Product Image */}
               {p.image && (
@@ -39,18 +81,28 @@ const ProductList = () => {
                 />
               )}
 
+              <Link to={`/products/${p._id}`} >
               <h3>
-                {p.commodity} Required in {p.district}
+                {p.commodity}{" "}
+                {activeTab === "buyers" ? "Required in" : "Available at"}{" "}
+                {p.district}
               </h3>
+              </Link>
 
               <p>
-                Target Price: <b>INR {p.price} </b>
+                Price: <b>INR {p.price}</b>
               </p>
               <p>
-                Qty Required: <b>{p.quantity} </b>
+                Quantity: <b>{p.quantity}</b>
+              </p>
+               <p>
+                type: <b>{p.type}</b>
               </p>
               <p>
-                Posted On: <b>5 hours ago</b> 
+                Category: <b>{p.commodity}</b>
+              </p>
+              <p>
+                Posted On: <b>5 hours ago</b>
               </p>
 
               <div className="user-info">
@@ -66,9 +118,11 @@ const ProductList = () => {
               </div>
 
               <div className="actions">
-               <Link to="/trendingPrices"> <button className="call-btn">
-                  <FaPhoneAlt /> CALL
-                </button></Link>
+                <Link to="/trendingPrices">
+                  <button className="call-btn">
+                    <FaPhoneAlt /> CALL
+                  </button>
+                </Link>
                 <div className="meta">
                   <span>
                     <FaCommentDots /> 1 Comments
