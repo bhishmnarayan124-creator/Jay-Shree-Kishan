@@ -46,6 +46,14 @@
   margin-bottom: 12px;
   font-size: 14px;
 }
+.popup-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
 
 .subscribe-btn {
   background: #28a745;
