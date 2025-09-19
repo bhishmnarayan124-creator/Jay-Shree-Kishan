@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductPage.css";
-import { FaList, FaThLarge, FaShoppingCart, FaHeart, FaBalanceScale } from "react-icons/fa";
-import { assets } from "../../assets/assets";
+import {
+  FaList,
+  FaThLarge,
+  FaShoppingCart,
+  FaHeart,
+  FaBalanceScale,
+} from "react-icons/fa";
 
 const ProductPage = () => {
   const [view, setView] = useState("grid"); // grid or list
@@ -9,19 +14,21 @@ const ProductPage = () => {
     size: [],
     color: [],
   });
+  const [products, setProducts] = useState([]);
 
-  // Dummy products
-  const products = [
-    {
-      id: 1,
-      name: "Organic Cold Pressed Sunflower Cooking Oil",
-      price: 122,
-      image: assets.product,
-      sizes: ["1kg", "2kg", "3kg"],
-      color: "red",
-      rating: 4,
-    },
-  ];
+  // ✅ Backend se products fetch karo
+  useEffect(() => {
+    fetch("http://localhost:5000/api/products") // yaha pe apna API endpoint dalna
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setProducts(data.products);
+        } else {
+          setProducts([]);
+        }
+      })
+      .catch((err) => console.error("❌ Error fetching products:", err));
+  }, []);
 
   const toggleFilter = (type, value) => {
     setSelectedFilters((prev) => {
@@ -37,12 +44,11 @@ const ProductPage = () => {
 
   return (
     <div className="product-page">
-        
       {/* Sidebar */}
       <aside className="sidebar">
         <h3 className="sidebar-title">CATEGORY</h3>
         <ul className="category-list">
-          <li className="active">Meats & Sea Foods (9)</li>
+          <li className="active">vegetables and fruits (9)</li>
           <li>Breads & Bakery (4)</li>
           <li>Breakfast & Dairy (7)</li>
           <li>Fruits & Juice (9)</li>
@@ -59,7 +65,7 @@ const ProductPage = () => {
               onChange={() => toggleFilter("size", "Small")}
               checked={selectedFilters.size.includes("Small")}
             />{" "}
-            Small (0)
+            Small
           </label>
           <label>
             <input
@@ -67,7 +73,7 @@ const ProductPage = () => {
               onChange={() => toggleFilter("size", "Medium")}
               checked={selectedFilters.size.includes("Medium")}
             />{" "}
-            Medium (1)
+            Medium
           </label>
         </div>
 
@@ -79,7 +85,7 @@ const ProductPage = () => {
               onChange={() => toggleFilter("color", "blue")}
               checked={selectedFilters.color.includes("blue")}
             />{" "}
-            blue (0)
+            Blue
           </label>
           <label>
             <input
@@ -87,7 +93,7 @@ const ProductPage = () => {
               onChange={() => toggleFilter("color", "red")}
               checked={selectedFilters.color.includes("red")}
             />{" "}
-            red (1)
+            Red
           </label>
           <label>
             <input
@@ -95,7 +101,7 @@ const ProductPage = () => {
               onChange={() => toggleFilter("color", "yellow")}
               checked={selectedFilters.color.includes("yellow")}
             />{" "}
-            yellow (0)
+            Yellow
           </label>
         </div>
 
@@ -132,25 +138,37 @@ const ProductPage = () => {
 
         {/* Products */}
         <div className={`product-list ${view}`}>
-          {products.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.name} />
-              <div className="product-info">
-                <h4>{product.name}</h4>
-                <p className="price">${product.price.toFixed(2)}</p>
-                <div className="sizes">
-                  {product.sizes.map((size) => (
-                    <button key={size} className="size-btn">{size}</button>
-                  ))}
-                </div>
-                <div className="product-actions">
-                  <button><FaShoppingCart /></button>
-                  <button><FaHeart /></button>
-                  <button><FaBalanceScale /></button>
+          {products.length === 0 ? (
+            <p>No products available</p>
+          ) : (
+            products.map((product) => (
+              <div key={product._id} className="product-card">
+                {product.image && (
+                  <img
+                    src={`http://localhost:5000/uploads/${product.image}`}
+                    alt={product.commodity}
+                  />
+                )}
+                <div className="product-info">
+                  <h4>{product.commodity}</h4>
+                  <p className="price">INR {product.price}</p>
+                  <p>Quantity: {product.quantity}</p>
+                  <p>Category: {product.category}</p>
+                  <div className="product-actions">
+                    <button>
+                      <FaShoppingCart />
+                    </button>
+                    <button>
+                      <FaHeart />
+                    </button>
+                    <button>
+                      <FaBalanceScale />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </main>
     </div>

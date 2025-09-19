@@ -13,13 +13,27 @@
     "@clerk/clerk-react": "^5.46.2",
     "axios": "^1.11.0",
     "dotenv": "^17.2.2",
+    "razorpay": "^2.9.6",
     "react": "^19.1.1",
     "react-alice-carousel": "^2.9.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.8.2",
+<<<<<<< HEAD
     "sweetalert2": "^11.23.0",
     "twilio": "^5.9.0"
+=======
+
+    "sweetalert2": "^11.23.0",
+    "twilio": "^5.9.0"
+
+
+    "twilio": "^5.9.0",
+
+    "sweetalert2": "^11.23.0"
+
+
+>>>>>>> 88d3c112b6658e3c14daf732fe679d6aac9a1ef6
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

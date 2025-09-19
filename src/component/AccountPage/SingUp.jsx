@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { registerUser } from "../../api";
 import "./Auth.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -16,6 +16,8 @@ const SignUp = () => {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const { plan } = location.state || {}; 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -39,6 +41,12 @@ const SignUp = () => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("username", form.username);
       }
+
+      if (plan) {
+      navigate("/payment", { state: { plan } });
+    } else {
+      navigate("/"); // normal homepage
+    }
 
       // Navbar अपडेट करने के लिए reload या navigate
       window.location.reload(); // simple तरीका
