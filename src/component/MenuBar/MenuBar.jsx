@@ -30,7 +30,7 @@ const MenuBar = () => {
           </button>
           {isDropdownOpen && (
             <ul className="dropdown-menu">
-              <li><Link to='/productpage'>Meats & Sea Foods</Link></li>
+              <li><Link to='/productpage'>vegetables and fruits</Link></li>
               <li>Breads & Bakery</li>
 
               <li className="sub-dropdown">
