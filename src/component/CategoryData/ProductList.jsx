@@ -8,12 +8,16 @@ import {
   FaMapMarkerAlt,
   FaUserCircle,
 } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const ProductList = () => {
   const [activeTab, setActiveTab] = useState("buyers"); // buyers | sellers
   const [products, setProducts] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // 👉 Assume user plan status (yeh aapko backend/auth se lena hoga)
+  const [hasPlan, setHasPlan] = useState(false);
 
   const queryParams = new URLSearchParams(location.search);
   const selectedCategory = queryParams.get("category");
@@ -22,7 +26,7 @@ const ProductList = () => {
   useEffect(() => {
     let url = `http://localhost:5000/api/products?type=${activeTab}`;
     if (selectedCategory) {
-      url += `&category=${selectedCategory}`; // backend में filter
+      url += `&category=${selectedCategory}`; // backend filter
     }
 
     fetch(url)
@@ -34,10 +38,19 @@ const ProductList = () => {
           setProducts([]);
         }
       })
-      .catch((err) =>
-        console.error("❌ Error fetching products:", err)
-      );
+      .catch((err) => console.error("❌ Error fetching products:", err));
   }, [activeTab, selectedCategory]);
+
+  // 👉 Call button handler
+  const handleCallClick = (phoneNumber) => {
+    if (hasPlan) {
+      // Plan active → direct call
+      window.location.href = `tel:${phoneNumber}`;
+    } else {
+      // Plan not active → redirect to plan purchase page
+      navigate("/trendingPrices");
+    }
+  };
 
   return (
     <div className="product-list">
@@ -81,12 +94,12 @@ const ProductList = () => {
                 />
               )}
 
-              <Link to={`/products/${p._id}`} >
-              <h3>
-                {p.commodity}{" "}
-                {activeTab === "buyers" ? "Required in" : "Available at"}{" "}
-                {p.district}
-              </h3>
+              <Link to={`/products/${p._id}`}>
+                <h3>
+                  {p.commodity}{" "}
+                  {activeTab === "buyers" ? "Required in" : "Available at"}{" "}
+                  {p.district}
+                </h3>
               </Link>
 
               <p>
@@ -95,7 +108,7 @@ const ProductList = () => {
               <p>
                 Quantity: <b>{p.quantity}</b>
               </p>
-               <p>
+              <p>
                 type: <b>{p.type}</b>
               </p>
               <p>
@@ -118,11 +131,13 @@ const ProductList = () => {
               </div>
 
               <div className="actions">
-                <Link to="/trendingPrices">
-                  <button className="call-btn">
-                    <FaPhoneAlt /> CALL
-                  </button>
-                </Link>
+                <button
+                  className="call-btn"
+                  onClick={() => handleCallClick(p.phone || "9999999999")}
+                >
+                  <FaPhoneAlt /> CALL
+                </button>
+
                 <div className="meta">
                   <span>
                     <FaCommentDots /> 1 Comments
